@@ -15,3 +15,4 @@ data_lake/
 mlruns/
 modelos_cache/
 dependencias_cache/
+cloudbeaver_data/*

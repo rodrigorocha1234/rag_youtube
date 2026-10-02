@@ -1,0 +1,9 @@
+recuperacao:
+  quantidade_documentos: 12
+  quantidade_candidatos: 40
+  estrategias:
+    canal: true
+    video: true
+    canal_video: true
+  fragmentacao:
+    estrategia: thread

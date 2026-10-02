@@ -38,3 +38,34 @@ loki.write "local_loki" {
     url = "http://loki:3100/loki/api/v1/push"
   }
 }
+
+// Logs de pipelines executados no host (CLI Python).
+local.file_match "pipeline_logs" {
+  path_targets = [{
+    __path__ = sys.env("RAG_LOG_GLOB"),
+    job      = sys.env("RAG_LOG_JOB"),
+  }]
+}
+
+loki.source.file "pipeline_logs" {
+  targets    = local.file_match.pipeline_logs.targets
+  forward_to = [loki.process.pipeline_logs.receiver]
+}
+
+loki.process "pipeline_logs" {
+  forward_to = [loki.write.local_loki.receiver]
+
+  stage.json {
+    expressions = {
+      nivel     = "nivel",
+      aplicacao = "aplicacao",
+    }
+  }
+
+  stage.labels {
+    values = {
+      level     = "nivel",
+      aplicacao = "aplicacao",
+    }
+  }
+}

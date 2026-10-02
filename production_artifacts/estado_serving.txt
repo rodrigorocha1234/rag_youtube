@@ -1,9 +1,0 @@
-alloy	running	
-grafana	running	healthy
-loki	running	
-postgres	running	healthy
-mlflow	running	healthy
-mlflow-serving	running	healthy
-prometheus	running	healthy
-metricas-treino	running	healthy
-storage	running	healthy

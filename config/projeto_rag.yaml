@@ -1,0 +1,33 @@
+projeto:
+  nome: youtube_comments_rag
+  ambiente: desenvolvimento
+
+youtube:
+  segredo_ambiente: YOUTUBE_API_KEY
+  canais:
+    id_canal:
+      - UC_SUBSTITUA_PELO_ID
+  coleta:
+    dias_publicacao_atras: 2
+    tamanho_pagina: 100
+  comentarios:
+    incluir_respostas: true
+    texto_formato: plainText
+
+datalake:
+  bucket: ${S3_BUCKET}
+  camada_bronze:
+    prefixo: bronze/youtube
+  camada_prata:
+    prefixo: prata/youtube
+  camada_ouro:
+    prefixo: ouro/youtube
+
+pgvector:
+  tabela_documentos: comentarios_vetoriais
+  indice: hnsw
+
+mlflow:
+  experimento: rag_youtube_comments
+  tracing:
+    habilitado: true

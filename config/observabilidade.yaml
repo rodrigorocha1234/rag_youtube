@@ -1,0 +1,11 @@
+observabilidade:
+  prometheus:
+    habilitado: true
+  mlflow:
+    tracing: true
+  metricas:
+    youtube: true
+    datalake: true
+    embeddings: true
+    pgvector: true
+    rag: true

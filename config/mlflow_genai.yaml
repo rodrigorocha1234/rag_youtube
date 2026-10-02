@@ -1,0 +1,9 @@
+mlflow:
+  tracking_uri: ${MLFLOW_TRACKING_URI}
+  experimento: rag_youtube_comments
+  tracing: true
+  avaliacao:
+    corretude: true
+    relevancia: true
+    groundedness: true
+    seguranca: true

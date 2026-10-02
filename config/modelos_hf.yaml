@@ -1,0 +1,9 @@
+embeddings:
+  provedor: hugging_face
+  modelo: ${MODELO_EMBEDDING}
+  dispositivo: ${DISPOSITIVO_EMBEDDING}
+  normalizar: true
+
+reranking:
+  habilitado: true
+  modelo: ${MODELO_RERANKER}
