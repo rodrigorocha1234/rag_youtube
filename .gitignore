@@ -1,0 +1,17 @@
+.env
+youtube.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+pgdata/
+storage-data/
+grafana_data/
+prometheus_data/
+observabilidade_data/
+data_lake/
+mlruns/
+modelos_cache/
+dependencias_cache/

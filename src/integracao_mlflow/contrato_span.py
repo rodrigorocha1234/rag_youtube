@@ -1,0 +1,13 @@
+"""Fronteira tipada para o SDK MLflow."""
+
+from collections.abc import Mapping
+from typing import Protocol
+
+from observabilidade_app.seguranca_eventos import ValorEvento
+
+
+class SpanMlflow(Protocol):
+    def set_inputs(self, inputs: Mapping[str, ValorEvento]) -> None: ...
+    def set_outputs(self, outputs: Mapping[str, ValorEvento]) -> None: ...
+    def set_attributes(self, attributes: Mapping[str, ValorEvento]) -> None: ...
+    def set_status(self, status: str) -> None: ...

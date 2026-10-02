@@ -1,0 +1,25 @@
+# HELP rag_youtube_serving_eventos_total Quantidade de eventos por etapa
+# TYPE rag_youtube_serving_eventos_total counter
+rag_youtube_serving_eventos_total{etapa="respostas_servidas"} 1.0
+# HELP rag_youtube_serving_eventos_created Quantidade de eventos por etapa
+# TYPE rag_youtube_serving_eventos_created gauge
+rag_youtube_serving_eventos_created{etapa="respostas_servidas"} 1.7909073333960645e+09
+# HELP rag_youtube_serving_erros_total Falhas por etapa
+# TYPE rag_youtube_serving_erros_total counter
+# HELP rag_youtube_serving_latencia_segundos Duração por etapa
+# TYPE rag_youtube_serving_latencia_segundos histogram
+rag_youtube_serving_latencia_segundos_bucket{etapa="servir_resposta",le="0.1"} 1.0
+rag_youtube_serving_latencia_segundos_bucket{etapa="servir_resposta",le="0.5"} 1.0
+rag_youtube_serving_latencia_segundos_bucket{etapa="servir_resposta",le="1.0"} 1.0
+rag_youtube_serving_latencia_segundos_bucket{etapa="servir_resposta",le="5.0"} 1.0
+rag_youtube_serving_latencia_segundos_bucket{etapa="servir_resposta",le="10.0"} 1.0
+rag_youtube_serving_latencia_segundos_bucket{etapa="servir_resposta",le="30.0"} 1.0
+rag_youtube_serving_latencia_segundos_bucket{etapa="servir_resposta",le="60.0"} 1.0
+rag_youtube_serving_latencia_segundos_bucket{etapa="servir_resposta",le="+Inf"} 1.0
+rag_youtube_serving_latencia_segundos_count{etapa="servir_resposta"} 1.0
+rag_youtube_serving_latencia_segundos_sum{etapa="servir_resposta"} 0.037290807999852404
+# HELP rag_youtube_serving_latencia_segundos_created Duração por etapa
+# TYPE rag_youtube_serving_latencia_segundos_created gauge
+rag_youtube_serving_latencia_segundos_created{etapa="servir_resposta"} 1.7909073333962965e+09
+# HELP rag_youtube_serving_qualidade Medição de qualidade por critério
+# TYPE rag_youtube_serving_qualidade gauge

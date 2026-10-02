@@ -1,0 +1,36 @@
+{
+  "endpoint": "http://localhost:8080/invocations",
+  "health_http": 200,
+  "resposta_http": 200,
+  "resposta": {
+    "predictions": [
+      {
+        "resposta": "Não há evidências suficientes nos comentários coletados.",
+        "fontes": []
+      }
+    ]
+  },
+  "modelo": {
+    "model_uri": "models:/m-574ff4123ea54a758fac87038985f0dd",
+    "documentos": 0,
+    "origem": "snapshot_ouro",
+    "inferencia_real_com_contexto": false
+  },
+  "trace_id": "tr-cc4d155dceee57745b28d896c16122ab",
+  "trace_estado": "OK",
+  "metricas_prometheus": [
+    {
+      "metric": {
+        "__name__": "rag_youtube_serving_eventos_total",
+        "etapa": "respostas_servidas",
+        "instance": "metricas-treino:8000",
+        "job": "ml_service"
+      },
+      "value": [
+        1790907419.973,
+        "1"
+      ]
+    }
+  ],
+  "avaliacao": "Snapshot vazio; nenhuma geração HF com contexto executada."
+}

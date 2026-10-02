@@ -1,0 +1,31 @@
+embeddings:
+  provedor: huggingface
+  modelo: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+  normalizar: true
+  dispositivo: cpu
+  tamanho_lote: 32
+  dimensoes: 384
+geracao:
+  provedor: huggingface
+  modelo: Qwen/Qwen2.5-0.5B-Instruct
+  temperatura: 0.1
+  max_tokens: 256
+  tarefa: text-generation
+  dispositivo: -1
+  prompt_sem_contexto: Não há evidências suficientes nos comentários coletados.
+  prompt_contexto: 'Responda com base exclusivamente nas fontes abaixo e cite os identificadores.
+
+    Fontes:
+
+    {contexto}
+
+    Pergunta: {pergunta}
+
+    Resposta:'
+reranking:
+  habilitado: true
+  provedor: huggingface
+  modelo: cross-encoder/mmarco-mMiniLMv2-L12-H384-v1
+  quantidade_candidatos: 20
+  quantidade_final: 8
+  dispositivo: cpu
